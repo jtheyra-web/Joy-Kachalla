@@ -6,6 +6,11 @@
     <title>Luminéa — Beauté & Soins Naturels</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+<main>
+   <!-- hero, products, about, cta, contact -->
+</main>
+
 <body>
 
 <!-- HERO SECTION -->
@@ -23,21 +28,21 @@
 
     <div class="product-grid">
         <div class="product-card">
-            <img src="Images/Luminéa Serum.jpg" alt="Sérum Éclat Luminéa">
+            <img src="Images/luminea-serum.jpg" alt="Sérum Éclat Luminéa">
             <h3>Sérum Éclat</h3>
             <p>Illumine et hydrate la peau.</p>
             <a href="#buy" class="btn-primary">Acheter</a>
         </div>
 
         <div class="product-card">
-            <img src="Images/Luminéa Crème.jpg" alt="Crème Hydratante Luminéa">
+            <img src="Images/luminea-cream.jpg" alt="Crème Hydratante Luminéa">
             <h3>Crème Hydratante</h3>
             <p>Hydratation intense toute la journée.</p>
             <a href="#buy" class="btn-primary">Acheter</a>
         </div>
 
         <div class="product-card">
-            <img src="Images/Luminéa Masque.jpg" alt="Masque Purifiant Luminéa">
+            <img src="images/luminea-mask.jpg" alt="Masque Purifiant Luminéa">
             <h3>Masque Purifiant</h3>
             <p>Nettoie et purifie la peau.</p>
             <a href="#buy" class="btn-primary">Acheter</a>
@@ -56,12 +61,42 @@
     <h2>Rejoignez la communauté Luminéa</h2>
     <p>Recevez 10% de réduction sur votre première commande !</p>
     <a href="#subscribe" class="btn-secondary">S’inscrire maintenant</a>
+    <a href="#contact" class="btn-secondary">Nous contacter</a>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact">
+    <h2>Contactez-nous</h2>
+    <p>Une question ? Besoin de conseils ? L’équipe Luminéa est à votre écoute.</p>
+
+    <form class="contact-form">
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+        <button type="submit" class="btn-primary">Envoyer</button>
+
+<p id="form-success" class="form-success">
+    Merci 💖 Votre message a bien été envoyé.
+</p>
+
+    </form>
 </section>
 
 <!-- FOOTER -->
 <footer>
     <p>© 2026 Luminéa. Tous droits réservés.</p>
 </footer>
+
+<script>
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // stop page refresh
+
+    const successMessage = document.getElementById('form-success');
+    successMessage.classList.add('show');
+
+    this.reset(); // clear form fields
+});
+</script>
 
 </body>
 </html>
